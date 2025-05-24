@@ -1,0 +1,8 @@
+{
+  "name": "nodejs-websocket",
+  "private": true,
+  "dependencies": {
+    "@types/ws": "^8.18.0",
+    "ws": "^8.18.0"
+  }
+}
