@@ -9,7 +9,7 @@ wss.on("connection", (socket) => {
   console.log("new client connected");
 
   socket.on("message", (message) => {
-    console.log("received message: ", message.toString());
+    console.log("received message:", message.toString());
     sendToAll(message);
   });
 });
