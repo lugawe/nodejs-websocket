@@ -21,7 +21,7 @@ export default function Chat() {
     return () => {
       socketRef.current.close();
     };
-  });
+  }, []);
 
   function createMessage() {
     const message = {
