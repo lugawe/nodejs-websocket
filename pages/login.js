@@ -1,14 +1,16 @@
-import { useEffect, useRef, useState } from "react"
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Login() {
   const router = useRouter();
+
   const [name, setName] = useState("");
-  function joinChat(event){
+
+  function joinChat(event) {
     event.preventDefault();
     router.push({
-      pathname: '/chat',
-      query: { name: name},
+      pathname: "/chat",
+      query: { name: name }
     });
   }
 
@@ -20,9 +22,8 @@ export default function Login() {
           <input
             type="text"
             placeholder="Username"
-            value = {name}
+            value={name}
             onChange={(e) => setName(e.target.value)}
-
             className="w-full px-3 py-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
@@ -36,5 +37,3 @@ export default function Login() {
     </div>
   );
 }
-
-
