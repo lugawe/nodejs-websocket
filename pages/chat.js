@@ -13,6 +13,10 @@ export default function Chat() {
   useEffect(() => {
     socketRef.current = new WebSocket("ws://localhost:3100");
 
+    socketRef.current.onerror = (error) => {
+      alert("failed to connect to WebSocketServer");
+    };
+
     socketRef.current.onmessage = (event) => {
       const message = JSON.parse(event.data);
       setMessages((prev) => [...prev, message]);
