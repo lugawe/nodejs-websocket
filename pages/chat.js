@@ -75,6 +75,7 @@ export default function Chat() {
             placeholder="Type a message..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            required
           />
           <button
             type="submit"
