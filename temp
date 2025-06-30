@@ -1,0 +1,19 @@
+// 클라이언트가 서버에 메세지 보낼때 발생
+socket.on("message", (message) => {
+    console.log("Received message:", message);
+})
+
+// 현재 연결된 모든 클라이언트 소켓들의 집합에서 서버가 아직 열려있으면 해당 클라이언트에게 메세지 전송
+// 받은 메세지를 모든 클라이언트들에게 방송?하는 코드
+wss.clients.forEach((clinet) => {
+    if (client.readyState === WebSocketServer.OPEN){
+        client.send(message);
+    }
+})
+
+//클라이언트가 연결을 끊을때 발생
+socket.on("close", () => {
+    console.log("Client disconnected");
+})
+
+
