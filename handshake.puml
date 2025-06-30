@@ -1,0 +1,10 @@
+@startuml
+== Protocol Upgrade ==
+Client -> Server: HTTP Request "Upgrade: websocket"
+Server --> Client: HTTP Response "101 Switching Protocols"
+
+== Streaming ==
+Client <-> Server: TCP Bidirectional Streaming
+Client <-> Server: One side closes stream
+@enduml
+
