@@ -1,4 +1,4 @@
-#set page(width: 280pt, height: 180pt, margin: 4pt)
+#set page(width: 280pt, height: 180pt, margin: 4pt, fill: rgb("#fffbf7"))
 
 _Example Client HTTP Request:_
 

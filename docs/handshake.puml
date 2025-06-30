@@ -1,4 +1,7 @@
 @startuml
+
+skinparam backgroundColor #fffbf7
+
 == Protocol Upgrade ==
 Client -> Server: HTTP Request "Upgrade: websocket"
 Server --> Client: HTTP Response "101 Switching Protocols"
